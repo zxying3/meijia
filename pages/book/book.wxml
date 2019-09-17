@@ -1,0 +1,24 @@
+<!--pages/book/book.wxml-->
+<view class="book-container">
+  <image class="header" src="../../images/list1.png"></image>
+  <form bindsubmit="submit">
+    <view class="people">请选择联系人</view>
+    <picker name="peoplePicker" class="people-picker" value="{{index}}" range="{{range}}" bindchange="changePeople">
+      <view>{{range[index]}}</view>
+    </picker>
+    <view class="people">服务时间</view>
+    <view class="date">
+        <image class="date-icon" src="../../images/date.png"></image>
+        <picker name="datePicker" class="date-picker" mode="date" value="{{date}}" bindchange="changeDate">
+          <view>{{date}}</view>
+        </picker>
+        <image class="date-icon" src="../../images/time.png"></image>
+        <picker name="timePicker" class="time-picker" mode="time" value="{{time}}" bindchange="changeTime">
+          <view>{{time}}</view>
+        </picker>
+    </view>
+    <view class="people">留言</view>
+    <input name="input" class="people-picker" placeholder="请输入"></input>
+    <button form-type="submit" type="warn">确定预约</button>
+  </form>
+</view>

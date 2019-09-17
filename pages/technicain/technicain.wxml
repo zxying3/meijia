@@ -1,0 +1,55 @@
+<!--pages/technicain/technicain.wxml-->
+<view class="container">
+
+  <scroll-view scroll-y="true" class="page-body">
+  
+    <view class="ar_picker_wrap">
+      <picker value="{{index}}" range="{{caseArray}}" bindchange="namechange">   
+        <view>{{caseArray[index]}}</view>      
+      </picker> 
+    </view>
+    <!--list-->
+    <view class="nav_section">
+      <view wx:if="{{list}}">
+
+          <block wx:for="{{list}}" wx:key="this">
+
+               <view class="nav_section_items" bindtap="navgeteDail">
+                    <!--image-->
+                    <view class="section_image">
+                      <image src="{{item.avatar}}"></image>
+                    
+                    </view>
+                    <!--content-->
+                    <view class="section_con">
+                        <view class="section_con_sub">
+                            <text>{{item.company}}</text>
+                    
+                        </view>
+                        <view class="section_con_price">
+                          <text>{{item.nickname}}</text>
+                          <text class="price">{{item.price}}</text>
+                        </view>
+                        <view class="message">
+                          <text>{{item.message}}</text>
+                        </view>
+
+                    </view>
+               
+               </view> 
+
+          </block>   
+
+
+      </view>
+      <view wx:else>
+        <text>暂无数据</text>
+      </view>
+    
+    </view>
+  
+  </scroll-view>
+
+
+</view>
+

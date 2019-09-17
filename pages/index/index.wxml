@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<scroll-view scroll-y="true"  class="page-body">
+  <view>
+
+    <!-- 轮播图 -->
+    <swiper class="banner" autoplay="true">
+      <block wx:for="{{banner_url}}" wx:key="{{item}}">
+        <swiper-item>
+          <image src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <!-- 导航栏 -->
+    <view class="nav">
+      <block wx:for="{{nav_url}}" wx:key="item.id">
+        <view bindtap="switchNav" data-id="{{item.id}}">
+          <image src="{{item.icon}}"></image>
+          <view class="{{curNav===item.id?'active':'white'}}">{{item.title}}</view>
+        </view>
+      </block>
+    </view>
+
+    <!-- list列表 -->
+    <block wx:for="{{getIndexNavSectionData[curNav-1]}}" wx:key="{{item.id}}">
+      <view class="list_container" data-id="{{item.id}}" bindtap="navigate">
+        <image src="{{item.civerpath}}"></image>
+        <view class="text_container">
+          <view class="subject">{{item.subject}}</view>
+          <text class="price">价格：{{item.price}}</text>
+          <text class="message">{{item.message}}</text>
+        </view>
+        <view class="book" catchtap="book">预约</view>
+      </view>
+    </block>
+
+  </view>
+</scroll-view>

@@ -1,0 +1,7 @@
+<!--pages/login/login.wxml-->
+<view class="login-container">
+  <image class="logo" src="../../images/login.jpg"></image>
+  <view class="title">美甲商城</view>
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信登录</button>
+  <view class="text" bindtap="navigateToindex">暂不登录，随便看看</view>
+</view>

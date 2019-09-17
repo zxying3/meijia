@@ -1,0 +1,69 @@
+/* pages/user/user.wxss */
+
+.avatarContainer {
+  width: 100%;
+  height: 300rpx;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-bottom: 10rpx;
+}
+
+.scroll-menus {
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  white-space: nowrap;
+  border-bottom: 1px solid #eee;
+  margin-left: 164rpx;
+}
+
+.scroll-menu1 {
+  display: inline-block;
+  width: 160rpx;
+  height: 80rpx;
+  text-align: center;
+  border-right: 2rpx solid #eee;
+  position: fixed;
+  top: 300rpx;
+  left: 10rpx;
+  z-index: 100;
+  border-bottom: 2rpx solid #eee;
+}
+
+.scroll-menu {
+  display: inline-block;
+  width: 160rpx;
+  height: 80rpx;
+  text-align: center;
+  border-right: 2rpx solid #eee;
+}
+
+.list {
+  position: relative;
+  width: 100%;
+  height: 80rpx;
+  margin: 20rpx 0 0 20rpx;
+  border-bottom: 2rpx solid #999;
+}
+
+.list image {
+  position: absolute;
+  top: 20rpx;
+  right: 50rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.list text {
+  line-height: 80rpx;
+}

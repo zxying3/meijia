@@ -1,0 +1,25 @@
+<!--pages/user/user.wxml-->
+<view class='avatarContainer'>
+  <image class='avatar' src='{{userInfo.avatarUrl}}'></image>
+  <text>{{userInfo.nickName}}</text>
+</view>
+<scroll-view scroll-x="true" class="scroll-menus">
+  <view class="scroll-menu1">姓名</view>
+  <view class="scroll-menu">待付款</view>
+  <view class="scroll-menu">待发货</view>
+  <view class="scroll-menu">待收货</view>
+  <view class="scroll-menu">待付款</view>
+  <view class="scroll-menu">待发货</view>
+  <view class="scroll-menu">待收货</view>
+  <view class="scroll-menu">待付款</view>
+  <view class="scroll-menu">待发货</view>
+</scroll-view>
+
+<i-cell-group>
+  <i-cell title="我的收藏" is-link></i-cell>
+  <i-cell title="我的购物车" is-link></i-cell>
+  <i-cell title="地址管理" is-link link-type="switchTab" url="/pages/index/index"></i-cell>
+  <i-cell title="SVIP特权" is-link url="/pages/index/index"></i-cell>
+  <i-cell title="优惠券" is-link></i-cell>
+</i-cell-group>
+<button bindtap="pay">微信支付</button>
